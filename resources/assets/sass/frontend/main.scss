@@ -1,0 +1,10 @@
+// Any Bootstrap or FontAwesome-specific variables added here will overwrite the defaults.
+@import "variable-overrides";
+
+@import '../../../../vendor/thomaspark/bootswatch/yeti/_variables';
+@import '../../../../vendor/twbs/bootstrap-sass/assets/stylesheets/bootstrap/_mixins';
+@import '../../../../vendor/thomaspark/bootswatch/yeti/_bootswatch';
+@import '../../../../vendor/twbs/bootstrap-sass/assets/stylesheets/_bootstrap';
+@import '../../../../vendor/fortawesome/font-awesome/scss/font-awesome';
+
+// Front-end SCSS goes here.
