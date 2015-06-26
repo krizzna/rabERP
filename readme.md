@@ -1,6 +1,6 @@
 ## rabAPP
 
-An internal applicaiton for RAB, build with Laravel with [Laravel Boiler plate](https://packagist.org/packages/rappasoft/laravel-5-boilerplate)
+An internal applicaiton for RAB, build with Laravel with [Laravel Boilerplate](https://packagist.org/packages/rappasoft/laravel-5-boilerplate)
 
 ### Example .env file:
 
