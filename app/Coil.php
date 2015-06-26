@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coil extends Model
 {
-    //
+    protected $guarded = [];
 }

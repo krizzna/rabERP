@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use View;
+use Input;
+use Redirect;
 use App\Coil;
 use Illuminate\Http\Request;
 
@@ -30,7 +32,7 @@ class CoilController extends Controller
      */
     public function create()
     {
-        //
+        return View::make('frontend.warehouse.coil.create');
     }
 
     /**
@@ -40,7 +42,10 @@ class CoilController extends Controller
      */
     public function store()
     {
-        //
+        $input = Input::all();
+	Coil::create($input);
+
+	return Redirect::route('coil.index')->withFlashSuccess('The coil data was successfully created.');
     }
 
     /**
@@ -62,7 +67,9 @@ class CoilController extends Controller
      */
     public function edit($id)
     {
-        //
+        $coil = Coil::findOrFail($id);
+
+	return View::make('frontend.warehouse.coil.edit', compact('coil'));
     }
 
     /**
@@ -73,7 +80,12 @@ class CoilController extends Controller
      */
     public function update($id)
     {
-        //
+        $coil = Coil::findOrFail($id);
+	$input = array_except(Input::all(), '_method');
+
+	$coil->update($input);
+	
+	return Redirect::route('coil.index')->withFlashSuccess('The coil data was successfully updated.');
     }
 
     /**
@@ -84,6 +96,8 @@ class CoilController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $coil = Coil::findOrFail($id)->delete();
+	
+	return Redirect::route('coil.index')->withFlashSuccess('The coil data was successfully deleted.');
     }
 }

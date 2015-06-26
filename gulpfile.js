@@ -1,5 +1,12 @@
 var elixir = require('laravel-elixir');
 
+var paths = {
+    'metisMenu': '../../vendor/metisMenu/dist',
+    'datetimepicker': '../../vendor/bootstrap-datetimepicker/',
+    'dataTables': '../../vendor/datatables/media',
+    'dataTablesBootstrap3Plugin': '../../vendor/datatables-bootstrap3-plugin/media'
+};
+
 elixir(function(mix) {
     mix
         // Copy webfont files from /vendor directories to /public directory.
@@ -10,10 +17,15 @@ elixir(function(mix) {
                 'frontend/main.scss'
             ], 'resources/assets/css/frontend')
         .styles([  // Combine pre-processed CSS files
+                paths.dataTablesBootstrap3Plugin + '/css/datatables-bootstrap3.css',
+		paths.datetimepicker + 'css/bootstrap-datetimepicker.css',
                 'frontend/app.css',
                 'frontend/main.css'
             ], 'public/css/frontend.css', 'resources/assets/css')
         .scripts([ // Combine front-end scripts
+		paths.datetimepicker + 'js/bootstrap-datetimepicker.js',
+		paths.dataTables + '/js/jquery.dataTables.js',
+		paths.dataTablesBootstrap3Plugin + '/js/datatables-bootstrap3.js',
                 'plugins.js',
                 'frontend/main.js'
             ], 'public/js/frontend.js', 'resources/assets/js')

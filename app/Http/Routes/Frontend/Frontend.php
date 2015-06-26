@@ -13,5 +13,6 @@ Route::group(['middleware' => 'auth'], function ()
 {
 	Route::get('dashboard', ['as' => 'frontend.dashboard', 'uses' => 'DashboardController@index']);
 	Route::resource('profile', 'ProfileController', ['only' => ['edit', 'update']]);
+	Route::get('coil/{id}/destroy', ['as' => 'coil.delete', 'uses' => 'CoilController@destroy']);
 	Route::resource('coil', 'CoilController');
 });

@@ -31,7 +31,6 @@
         @include('frontend.includes.nav')
 
         <div class="container-fluid">
-            @include('includes.partials.messages')
             @yield('content')
         </div><!-- container -->
 
@@ -42,6 +41,8 @@
         @yield('before-scripts-end')
         {!! HTML::script(elixir('js/frontend.js')) !!}
         @yield('after-scripts-end')
+
+	@yield('scripts')
 
         @include('includes.partials.ga')
     </body>
