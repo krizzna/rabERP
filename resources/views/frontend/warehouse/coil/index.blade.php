@@ -5,7 +5,7 @@
   <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
       <li class="active">{!! link_to_route_html('coil.index','<i class="fa fa-circle-o"></i> Entry Stock') !!}</li>
-      <li>{!! link_to_route_html('coil.create','<i class="fa fa-plus-circle"></i> Entry Stock') !!}</li>
+      <li>{!! link_to_route_html('coil.create','<i class="fa fa-plus-circle"></i> Add New') !!}</li>
     </ul>
   </div><!-- END SIDEBAR -->
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -13,7 +13,7 @@
     <div class="page-header">
       <h3><i class="fa fa-list-ol"></i> Entry Stock
 	<div class="pull-right">
-	  <div class="pull-right">{!! link_to_route_html('coil.create','<i class="fa fa-plus-circle"></i> Entry Stock',null, ['class' => 'btn btn-primary']) !!}</div>
+	  <div class="pull-right">{!! link_to_route_html('coil.create','<i class="fa fa-plus-circle"></i> Add New',null, ['class' => 'btn btn-primary']) !!}</div>
 	</div>
       </h3>
       

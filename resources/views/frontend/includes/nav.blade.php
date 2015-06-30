@@ -15,6 +15,11 @@
 					<li><a href="{!! URL::to('/') !!}"><i class="fa fa-home"></i> Home</a></li>
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Purchasing <span class="caret"></span></a>
+					  <ul class="dropdown-menu" role="menu">
+					    <li>{!! link_to('customers', 'Entry Data Customer') !!}</li>
+					    <li>{!! link_to('/', 'Entry Data Suplier') !!}</li>
+					    <li class="divider"></li>
+					  </ul>
 					</li>
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Marketing <span class="caret"></span></a>
@@ -33,6 +38,11 @@
 					</li>
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PPC <span class="caret"></span></a>
+					  <ul class="dropdown-menu" role="menu">
+					    <li class="dropdown-header">Cutting Center</li>
+					    <li>{!! link_to('cuttings', 'Entry SPK RAB') !!}</li>
+					    <li>{!! link_to('/', 'Entry SPK Customer') !!}</li>
+					  </ul>
 					</li>
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Warehouse <span class="caret"></span></a>
@@ -47,8 +57,12 @@
 					    <li>{!! link_to('/', 'Report') !!}</li>
 					  </ul>
 					</li>
-					<li>{!! link_to('/', 'Maintenance') !!}</li>
-					<li>{!! link_to('/', 'Setting') !!}</li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maintenance <span class="caret"></span></a>
+					</li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
+					</li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
